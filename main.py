@@ -13,6 +13,9 @@ def get_db_connection():
 
 @app.get("/database", response_class=HTMLResponse)
 def database():
+    # Print statement for the application logs
+    print("Print statement inside the Python database() method. Chris Hastings", flush=True)
+
     conn = get_db_connection()
     cur = conn.cursor()
     
